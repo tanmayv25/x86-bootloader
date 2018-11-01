@@ -3,7 +3,7 @@
 The project is implemented in three incremental parts
 
 - [x] Print 'Hello World!' with 16-bit mode
-- [] Print 'Hello World!' with 32-bit protected mode 
+- [x] Print 'Hello World!' with 32-bit protected mode 
 - [] Compile and load a C++ function into memory and later call it.
 
 ## What is NASM?
@@ -14,11 +14,11 @@ QEMU is a generic and open source machine emulator and virtualizer.
 
 ## Instructions to run 1st step:
 
-1. Compile the assembly code into binary using nasm: nasm -f bin boot_v1.asm -o boot_v1.bin
+1. Compile the assembly code into binary using nasm: nasm -f bin boot_v*.asm -o boot_v*.bin
 
-2. Run **hexdump boot_v1.bin** to verify the padded zeros and the last 2 bytes.
+2. Run **hexdump boot_v*.bin** to verify the padded zeros and the last 2 bytes.
 
-3. Boot QEMU off a floppy disk: qemu-system-x86_64 -fda boot_v1.bin
+3. Boot QEMU off a floppy disk: qemu-system-x86_64 -fda boot_v*.bin
 
 Hello World! can be seen printed on the terminal.
 
