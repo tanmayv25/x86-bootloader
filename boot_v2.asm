@@ -21,6 +21,7 @@ or eax,0x1 ; set the protected mode bit on special CPU reg cr0
 mov cr0, eax
 jmp CODE_SEG:boot2 ; long jump to the code segment
 
+; Build a Global Descriptor Table with Data and Code Segments. 
 gdt_start:
     dq 0x0
 gdt_code:
